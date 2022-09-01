@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EditorView: View {
+    var outputModels: [UUID: OutputModelBase] = [:]
+    var inputModels: [UUID: InputModelBase] = [:]
     @State var testViews: [Prototype1] = []
     var body: some View {
         

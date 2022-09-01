@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 fileprivate enum PrototypeSize {
     static let min = CGSize(width: 200, height: 30)

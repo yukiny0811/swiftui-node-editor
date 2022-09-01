@@ -22,7 +22,10 @@
 		BB323CD828C107A20085E814 /* Renderer+MTKViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CD728C107A20085E814 /* Renderer+MTKViewDelegate.swift */; };
 		BB323CDA28C107E50085E814 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = BB323CD928C107E50085E814 /* Shader.metal */; };
 		BB323CDE28C108BF0085E814 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CDD28C108BF0085E814 /* MetalView.swift */; };
-		BB323CE128C11A6E0085E814 /* EditorView+Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CE028C11A6E0085E814 /* EditorView+Variables.swift */; };
+		BB323CE428C120AC0085E814 /* OutputModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CE328C120AC0085E814 /* OutputModelBase.swift */; };
+		BB323CE728C120F00085E814 /* OutputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CE628C120F00085E814 /* OutputModel.swift */; };
+		BB323CE928C121850085E814 /* InputModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CE828C121850085E814 /* InputModelBase.swift */; };
+		BB323CEB28C1219A0085E814 /* InputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CEA28C1219A0085E814 /* InputModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +65,10 @@
 		BB323CD728C107A20085E814 /* Renderer+MTKViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Renderer+MTKViewDelegate.swift"; sourceTree = "<group>"; };
 		BB323CD928C107E50085E814 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
 		BB323CDD28C108BF0085E814 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
-		BB323CE028C11A6E0085E814 /* EditorView+Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditorView+Variables.swift"; sourceTree = "<group>"; };
+		BB323CE328C120AC0085E814 /* OutputModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputModelBase.swift; sourceTree = "<group>"; };
+		BB323CE628C120F00085E814 /* OutputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputModel.swift; sourceTree = "<group>"; };
+		BB323CE828C121850085E814 /* InputModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModelBase.swift; sourceTree = "<group>"; };
+		BB323CEA28C1219A0085E814 /* InputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,8 @@
 		BB323CA028C0F4950085E814 /* NodeEditor */ = {
 			isa = PBXGroup;
 			children = (
+				BB323CE528C120D50085E814 /* Models */,
+				BB323CE228C1209E0085E814 /* ModelBases */,
 				BB323CDF28C11A4D0085E814 /* EditorViews */,
 				BB323CD228C107040085E814 /* MetalUtils */,
 				BB323CA128C0F4950085E814 /* NodeEditorApp.swift */,
@@ -167,9 +175,26 @@
 			isa = PBXGroup;
 			children = (
 				BB323CCC28C0FC500085E814 /* EditorView.swift */,
-				BB323CE028C11A6E0085E814 /* EditorView+Variables.swift */,
 			);
 			path = EditorViews;
+			sourceTree = "<group>";
+		};
+		BB323CE228C1209E0085E814 /* ModelBases */ = {
+			isa = PBXGroup;
+			children = (
+				BB323CE328C120AC0085E814 /* OutputModelBase.swift */,
+				BB323CE828C121850085E814 /* InputModelBase.swift */,
+			);
+			path = ModelBases;
+			sourceTree = "<group>";
+		};
+		BB323CE528C120D50085E814 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB323CE628C120F00085E814 /* OutputModel.swift */,
+				BB323CEA28C1219A0085E814 /* InputModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,16 +328,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB323CD128C0FC7F0085E814 /* Prototype1.swift in Sources */,
+				BB323CE428C120AC0085E814 /* OutputModelBase.swift in Sources */,
 				BB323CD428C1072B0085E814 /* ShaderCore.swift in Sources */,
 				BB323CDE28C108BF0085E814 /* MetalView.swift in Sources */,
+				BB323CE928C121850085E814 /* InputModelBase.swift in Sources */,
 				BB323CCD28C0FC500085E814 /* EditorView.swift in Sources */,
 				BB323CDA28C107E50085E814 /* Shader.metal in Sources */,
 				BB323CD628C107890085E814 /* Renderer.swift in Sources */,
 				BB323CA428C0F4950085E814 /* ContentView.swift in Sources */,
 				BB323CD828C107A20085E814 /* Renderer+MTKViewDelegate.swift in Sources */,
+				BB323CEB28C1219A0085E814 /* InputModel.swift in Sources */,
 				BB323CCF28C0FC6E0085E814 /* NodeView.swift in Sources */,
-				BB323CE128C11A6E0085E814 /* EditorView+Variables.swift in Sources */,
 				BB323CA228C0F4950085E814 /* NodeEditorApp.swift in Sources */,
+				BB323CE728C120F00085E814 /* OutputModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
