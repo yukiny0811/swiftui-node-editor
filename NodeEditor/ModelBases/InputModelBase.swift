@@ -9,6 +9,6 @@ import Foundation
 import Combine
 
 class InputModelBase {
-    let uuid: String = UUID().uuidString
+    let uuid = UUID()
     var subscriptions = Set<AnyCancellable>()
 }

@@ -15,7 +15,6 @@
 		BB323CBE28C0F4970085E814 /* NodeEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CBD28C0F4970085E814 /* NodeEditorUITests.swift */; };
 		BB323CC028C0F4970085E814 /* NodeEditorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CBF28C0F4970085E814 /* NodeEditorUITestsLaunchTests.swift */; };
 		BB323CCD28C0FC500085E814 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CCC28C0FC500085E814 /* EditorView.swift */; };
-		BB323CCF28C0FC6E0085E814 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CCE28C0FC6E0085E814 /* NodeView.swift */; };
 		BB323CD128C0FC7F0085E814 /* Prototype1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CD028C0FC7F0085E814 /* Prototype1.swift */; };
 		BB323CD428C1072B0085E814 /* ShaderCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CD328C1072B0085E814 /* ShaderCore.swift */; };
 		BB323CD628C107890085E814 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CD528C107890085E814 /* Renderer.swift */; };
@@ -26,6 +25,11 @@
 		BB323CE728C120F00085E814 /* OutputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CE628C120F00085E814 /* OutputModel.swift */; };
 		BB323CE928C121850085E814 /* InputModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CE828C121850085E814 /* InputModelBase.swift */; };
 		BB323CEB28C1219A0085E814 /* InputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB323CEA28C1219A0085E814 /* InputModel.swift */; };
+		BB66F23028C12DF400A453BD /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F22F28C12DF400A453BD /* InputView.swift */; };
+		BB66F23228C12ECF00A453BD /* EditorView+AddStaticFloatOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F23128C12ECF00A453BD /* EditorView+AddStaticFloatOutput.swift */; };
+		BB66F23428C1305100A453BD /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F23328C1305100A453BD /* NodeView.swift */; };
+		BB66F23828C131EA00A453BD /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F23728C131EA00A453BD /* OutputView.swift */; };
+		BB66F23A28C1338800A453BD /* IOModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F23928C1338800A453BD /* IOModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +62,6 @@
 		BB323CBD28C0F4970085E814 /* NodeEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeEditorUITests.swift; sourceTree = "<group>"; };
 		BB323CBF28C0F4970085E814 /* NodeEditorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeEditorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB323CCC28C0FC500085E814 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
-		BB323CCE28C0FC6E0085E814 /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		BB323CD028C0FC7F0085E814 /* Prototype1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype1.swift; sourceTree = "<group>"; };
 		BB323CD328C1072B0085E814 /* ShaderCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderCore.swift; sourceTree = "<group>"; };
 		BB323CD528C107890085E814 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
@@ -69,6 +72,11 @@
 		BB323CE628C120F00085E814 /* OutputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputModel.swift; sourceTree = "<group>"; };
 		BB323CE828C121850085E814 /* InputModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModelBase.swift; sourceTree = "<group>"; };
 		BB323CEA28C1219A0085E814 /* InputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModel.swift; sourceTree = "<group>"; };
+		BB66F22F28C12DF400A453BD /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		BB66F23128C12ECF00A453BD /* EditorView+AddStaticFloatOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditorView+AddStaticFloatOutput.swift"; sourceTree = "<group>"; };
+		BB66F23328C1305100A453BD /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
+		BB66F23728C131EA00A453BD /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputView.swift; sourceTree = "<group>"; };
+		BB66F23928C1338800A453BD /* IOModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,17 +127,19 @@
 		BB323CA028C0F4950085E814 /* NodeEditor */ = {
 			isa = PBXGroup;
 			children = (
+				BB66F22E28C12DE700A453BD /* NodeViews */,
 				BB323CE528C120D50085E814 /* Models */,
 				BB323CE228C1209E0085E814 /* ModelBases */,
 				BB323CDF28C11A4D0085E814 /* EditorViews */,
 				BB323CD228C107040085E814 /* MetalUtils */,
 				BB323CA128C0F4950085E814 /* NodeEditorApp.swift */,
 				BB323CA328C0F4950085E814 /* ContentView.swift */,
-				BB323CCE28C0FC6E0085E814 /* NodeView.swift */,
 				BB323CD028C0FC7F0085E814 /* Prototype1.swift */,
 				BB323CA528C0F4960085E814 /* Assets.xcassets */,
 				BB323CAA28C0F4960085E814 /* NodeEditor.entitlements */,
 				BB323CA728C0F4960085E814 /* Preview Content */,
+				BB66F23128C12ECF00A453BD /* EditorView+AddStaticFloatOutput.swift */,
+				BB66F23928C1338800A453BD /* IOModel.swift */,
 			);
 			path = NodeEditor;
 			sourceTree = "<group>";
@@ -195,6 +205,16 @@
 				BB323CEA28C1219A0085E814 /* InputModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BB66F22E28C12DE700A453BD /* NodeViews */ = {
+			isa = PBXGroup;
+			children = (
+				BB66F22F28C12DF400A453BD /* InputView.swift */,
+				BB66F23328C1305100A453BD /* NodeView.swift */,
+				BB66F23728C131EA00A453BD /* OutputView.swift */,
+			);
+			path = NodeViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,17 +350,21 @@
 				BB323CD128C0FC7F0085E814 /* Prototype1.swift in Sources */,
 				BB323CE428C120AC0085E814 /* OutputModelBase.swift in Sources */,
 				BB323CD428C1072B0085E814 /* ShaderCore.swift in Sources */,
+				BB66F23428C1305100A453BD /* NodeView.swift in Sources */,
 				BB323CDE28C108BF0085E814 /* MetalView.swift in Sources */,
 				BB323CE928C121850085E814 /* InputModelBase.swift in Sources */,
+				BB66F23228C12ECF00A453BD /* EditorView+AddStaticFloatOutput.swift in Sources */,
 				BB323CCD28C0FC500085E814 /* EditorView.swift in Sources */,
 				BB323CDA28C107E50085E814 /* Shader.metal in Sources */,
 				BB323CD628C107890085E814 /* Renderer.swift in Sources */,
 				BB323CA428C0F4950085E814 /* ContentView.swift in Sources */,
+				BB66F23A28C1338800A453BD /* IOModel.swift in Sources */,
 				BB323CD828C107A20085E814 /* Renderer+MTKViewDelegate.swift in Sources */,
 				BB323CEB28C1219A0085E814 /* InputModel.swift in Sources */,
-				BB323CCF28C0FC6E0085E814 /* NodeView.swift in Sources */,
+				BB66F23028C12DF400A453BD /* InputView.swift in Sources */,
 				BB323CA228C0F4950085E814 /* NodeEditorApp.swift in Sources */,
 				BB323CE728C120F00085E814 /* OutputModel.swift in Sources */,
+				BB66F23828C131EA00A453BD /* OutputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,24 +8,21 @@
 import SwiftUI
 
 struct EditorView: View {
-    var outputModels: [UUID: OutputModelBase] = [:]
-    var inputModels: [UUID: InputModelBase] = [:]
-    @State var testViews: [Prototype1] = []
+    let ioModel = IOModel()
+    @State var nodeViews: [NodeView] = []
     var body: some View {
-        
-        ForEach(testViews) { v in
-            v
+        ScrollView([.horizontal, .vertical], showsIndicators: true) {
+            ZStack {
+                ForEach(nodeViews) { v in
+                    v.moveDisabled(true)
+                }
+                MetalView()
+                    .frame(width: 100, height: 100)
+                Button("test") {
+                    addStaticFloatOutput()
+                }
+            }
+            .frame(minWidth: 1500, minHeight: 1500)
         }
-        Button("test") {
-            testViews.append(Prototype1())
-        }
-        MetalView()
-            .frame(width: 100, height: 100)
-    }
-}
-
-struct EditorView_Previews: PreviewProvider {
-    static var previews: some View {
-        EditorView()
     }
 }
