@@ -16,6 +16,7 @@ struct NodeView: View, Identifiable {
     let id = UUID()
     let inputViews: [InputView]
     let outputViews: [OutputView]
+    let processViewType: ProcessViewType
     @State private var position: CGPoint = CGPoint(x: 200, y: 200)
     var body: some View {
         VStack {
@@ -30,7 +31,7 @@ struct NodeView: View, Identifiable {
             ForEach(inputViews) { v in
                 v
             }
-            Text("Node")
+            insertProcessView(processViewType)
             ForEach(outputViews) { v in
                 v
             }

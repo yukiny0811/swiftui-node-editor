@@ -14,7 +14,7 @@ struct EditorView: View {
         ScrollView([.horizontal, .vertical], showsIndicators: true) {
             ZStack {
                 ForEach(nodeViews) { v in
-                    v.moveDisabled(true)
+                    v
                 }
                 MetalView()
                     .frame(width: 100, height: 100)

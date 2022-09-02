@@ -30,6 +30,8 @@
 		BB66F23428C1305100A453BD /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F23328C1305100A453BD /* NodeView.swift */; };
 		BB66F23828C131EA00A453BD /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F23728C131EA00A453BD /* OutputView.swift */; };
 		BB66F23A28C1338800A453BD /* IOModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F23928C1338800A453BD /* IOModel.swift */; };
+		BB66F23F28C1AC7D00A453BD /* FloatOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F23E28C1AC7D00A453BD /* FloatOutputView.swift */; };
+		BB66F24128C1BB6800A453BD /* NodeView+InsertProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB66F24028C1BB6800A453BD /* NodeView+InsertProcessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		BB66F23328C1305100A453BD /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		BB66F23728C131EA00A453BD /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputView.swift; sourceTree = "<group>"; };
 		BB66F23928C1338800A453BD /* IOModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOModel.swift; sourceTree = "<group>"; };
+		BB66F23E28C1AC7D00A453BD /* FloatOutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatOutputView.swift; sourceTree = "<group>"; };
+		BB66F24028C1BB6800A453BD /* NodeView+InsertProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NodeView+InsertProcessView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		BB323CA028C0F4950085E814 /* NodeEditor */ = {
 			isa = PBXGroup;
 			children = (
+				BB66F23D28C1AC6B00A453BD /* ProcessViews */,
 				BB66F22E28C12DE700A453BD /* NodeViews */,
 				BB323CE528C120D50085E814 /* Models */,
 				BB323CE228C1209E0085E814 /* ModelBases */,
@@ -215,6 +220,15 @@
 				BB66F23728C131EA00A453BD /* OutputView.swift */,
 			);
 			path = NodeViews;
+			sourceTree = "<group>";
+		};
+		BB66F23D28C1AC6B00A453BD /* ProcessViews */ = {
+			isa = PBXGroup;
+			children = (
+				BB66F23E28C1AC7D00A453BD /* FloatOutputView.swift */,
+				BB66F24028C1BB6800A453BD /* NodeView+InsertProcessView.swift */,
+			);
+			path = ProcessViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +373,9 @@
 				BB323CD628C107890085E814 /* Renderer.swift in Sources */,
 				BB323CA428C0F4950085E814 /* ContentView.swift in Sources */,
 				BB66F23A28C1338800A453BD /* IOModel.swift in Sources */,
+				BB66F24128C1BB6800A453BD /* NodeView+InsertProcessView.swift in Sources */,
 				BB323CD828C107A20085E814 /* Renderer+MTKViewDelegate.swift in Sources */,
+				BB66F23F28C1AC7D00A453BD /* FloatOutputView.swift in Sources */,
 				BB323CEB28C1219A0085E814 /* InputModel.swift in Sources */,
 				BB66F23028C12DF400A453BD /* InputView.swift in Sources */,
 				BB323CA228C0F4950085E814 /* NodeEditorApp.swift in Sources */,
