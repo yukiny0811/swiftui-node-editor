@@ -14,10 +14,10 @@ extension EditorView {
         let floatOutputModel = OutputModel<Float>()
         ioModel.outputModels[floatOutputModel.uuid] = floatOutputModel
         let outputView = OutputView(outputModel: floatOutputModel)
-        
         let node = NodeView(inputViews: [], outputViews: [outputView], processViewType: .floatOutput)
-        
         self.nodeViews.append(node)
+        
+        
     }
 }
 

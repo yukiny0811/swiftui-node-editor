@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import Combine
 
 fileprivate enum NodeSizeConfig {
     static let min = CGSize(width: 200, height: 30)
     static let max = CGSize(width: 200, height: CGFloat.infinity)
+}
+
+class ProcessModel<T> {
+    var subscriptions = Set<AnyCancellable>()
+    @Published var value: T? = nil
 }
 
 struct NodeView: View, Identifiable {
@@ -17,6 +23,14 @@ struct NodeView: View, Identifiable {
     let inputViews: [InputView]
     let outputViews: [OutputView]
     let processViewType: ProcessViewType
+    var processView: some View {
+        insertProcessView(processViewType)
+    }
+    init() {
+        processView.processModel.$value.sink { value in
+            (outputViews[0].outputModel as! OutputModel<Float>).value = value
+        }.store(in: &processView.processModel.subscriptions)
+    }
     @State private var position: CGPoint = CGPoint(x: 200, y: 200)
     var body: some View {
         VStack {
@@ -31,7 +45,7 @@ struct NodeView: View, Identifiable {
             ForEach(inputViews) { v in
                 v
             }
-            insertProcessView(processViewType)
+            processView
             ForEach(outputViews) { v in
                 v
             }
